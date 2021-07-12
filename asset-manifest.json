@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/homework-react.js-3.1/static/css/main.0af27657.chunk.css",
-    "main.js": "/homework-react.js-3.1/static/js/main.aff74e0e.chunk.js",
-    "main.js.map": "/homework-react.js-3.1/static/js/main.aff74e0e.chunk.js.map",
+    "main.css": "/homework-react.js-3.1/static/css/main.aae742d4.chunk.css",
+    "main.js": "/homework-react.js-3.1/static/js/main.084e070b.chunk.js",
+    "main.js.map": "/homework-react.js-3.1/static/js/main.084e070b.chunk.js.map",
     "runtime-main.js": "/homework-react.js-3.1/static/js/runtime-main.c9cab11d.js",
     "runtime-main.js.map": "/homework-react.js-3.1/static/js/runtime-main.c9cab11d.js.map",
     "static/css/2.ab75b8d7.chunk.css": "/homework-react.js-3.1/static/css/2.ab75b8d7.chunk.css",
-    "static/js/2.8790b639.chunk.js": "/homework-react.js-3.1/static/js/2.8790b639.chunk.js",
-    "static/js/2.8790b639.chunk.js.map": "/homework-react.js-3.1/static/js/2.8790b639.chunk.js.map",
+    "static/js/2.83061eb5.chunk.js": "/homework-react.js-3.1/static/js/2.83061eb5.chunk.js",
+    "static/js/2.83061eb5.chunk.js.map": "/homework-react.js-3.1/static/js/2.83061eb5.chunk.js.map",
     "static/js/3.99e2e2e6.chunk.js": "/homework-react.js-3.1/static/js/3.99e2e2e6.chunk.js",
     "static/js/3.99e2e2e6.chunk.js.map": "/homework-react.js-3.1/static/js/3.99e2e2e6.chunk.js.map",
     "index.html": "/homework-react.js-3.1/index.html",
     "static/css/2.ab75b8d7.chunk.css.map": "/homework-react.js-3.1/static/css/2.ab75b8d7.chunk.css.map",
-    "static/css/main.0af27657.chunk.css.map": "/homework-react.js-3.1/static/css/main.0af27657.chunk.css.map",
-    "static/js/2.8790b639.chunk.js.LICENSE.txt": "/homework-react.js-3.1/static/js/2.8790b639.chunk.js.LICENSE.txt"
+    "static/css/main.aae742d4.chunk.css.map": "/homework-react.js-3.1/static/css/main.aae742d4.chunk.css.map",
+    "static/js/2.83061eb5.chunk.js.LICENSE.txt": "/homework-react.js-3.1/static/js/2.83061eb5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c9cab11d.js",
     "static/css/2.ab75b8d7.chunk.css",
-    "static/js/2.8790b639.chunk.js",
-    "static/css/main.0af27657.chunk.css",
-    "static/js/main.aff74e0e.chunk.js"
+    "static/js/2.83061eb5.chunk.js",
+    "static/css/main.aae742d4.chunk.css",
+    "static/js/main.084e070b.chunk.js"
   ]
 }
