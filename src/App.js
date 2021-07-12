@@ -13,6 +13,8 @@ export default class App extends Component {
     todo: [],
     page: 1,
     loading: false,
+    bigPicture: "",
+    showModal: false,
   };
 
   API_KEY = "21345832-5dab6ae111cd5d8e046b71308";
@@ -25,9 +27,11 @@ export default class App extends Component {
 
   getApiData = () => {
     this.setState({ loading: true });
+    const { searchQuery, page } = this.state;
+
     axios
       .get(
-        `https://pixabay.com/api/?q=${this.state.searchQuery}&page=${this.state.page}&key=${this.API_KEY}&image_type=photo&orientation=horizontal&per_page=12`
+        `https://pixabay.com/api/?q=${searchQuery}&page=${page}&key=${this.API_KEY}&image_type=photo&orientation=horizontal&per_page=12`
       )
       .then(({ data: { hits } }) =>
         this.setState((prevState) => ({
@@ -37,6 +41,7 @@ export default class App extends Component {
       )
       .finally(() => this.setState({ loading: false }));
   };
+
   getSearchQuery = (e) => {
     this.setState({
       searchQuery: e,
@@ -49,16 +54,33 @@ export default class App extends Component {
     this.setState({ searchQuery: "", page: 1 });
   };
 
+  openModal = (e) => {
+    const { bigpicture } = e.currentTarget.dataset;
+
+    this.setState({
+      bigPicture: bigpicture,
+      showModal: true,
+    });
+  };
+
+  toggleModal = () => {
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
+    }));
+  };
+
   render() {
+    const { todo, bigPicture, loading, showModal } = this.state;
+
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: "smooth",
     });
-    const { todo, loading } = this.state;
+
     return (
       <div>
         <Searchbar getSearchQuery={this.getSearchQuery} />
-        <ImageGallery dataListCard={todo} />
+        <ImageGallery dataListCard={todo} openModal={this.openModal} />
         {todo.length > 0 && (
           <Button
             getApiData={this.getApiData}
@@ -66,7 +88,7 @@ export default class App extends Component {
           />
         )}
         {loading && <Loader />}
-        <Modal imgListCard={todo} />
+        {showModal && <Modal img={bigPicture} onClose={this.toggleModal} />}
       </div>
     );
   }

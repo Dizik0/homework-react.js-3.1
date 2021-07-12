@@ -4,9 +4,10 @@ import { ImageGalleryItem } from "../ImageGalleryItem";
 import { Component } from "react";
 export class ImageGallery extends Component {
   render() {
+    const { dataListCard, openModal } = this.props;
     return (
       <ul className="ImageGallery">
-        <ImageGalleryItem dataListCard={this.props.dataListCard} />
+        <ImageGalleryItem dataListCard={dataListCard} openModal={openModal} />
       </ul>
     );
   }
@@ -14,5 +15,4 @@ export class ImageGallery extends Component {
 
 ImageGalleryItem.propTypes = {
   dataListCard: PropTypes.array.isRequired,
-  // openModal: PropTypes.func.isRequired,
 };
